@@ -9,6 +9,9 @@ Run the Services
 Start Service A
 uvicorn service_a:app --port 9001
 
+Start Service B
+uvicorn service_b:app --port 9002
+
 Start Reverse Proxy
 uvicorn reverse_proxy:app --port 8000
 
