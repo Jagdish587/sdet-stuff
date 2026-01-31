@@ -1,11 +1,11 @@
-## Setup Virtual Environment & Install Dependencies
+## reverse proxy examples
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip3 install fastapi uvicorn requests python-jose httpx 
 
-**Run the Services**
+Run the Services
 Start Service A
 uvicorn service_a:app --port 9001
 
