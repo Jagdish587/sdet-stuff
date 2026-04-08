@@ -11,3 +11,10 @@ def say_hello():
     print("Hello!")
 
 say_hello()
+
+"""
+O/p
+Something before the function runs
+Hello!
+Something after the function runs
+"""
