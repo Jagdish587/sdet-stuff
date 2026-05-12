@@ -1,13 +1,20 @@
 from contextlib import contextmanager
-import time
 
 @contextmanager
-def timer():
-    start = time.time()          # setup
-    yield                        # control goes to with-block
-    end = time.time()            # cleanup
-    print(f"Time taken: {end - start:.4f} seconds")
+def open_file(filename, mode="w"):
+    file = open(filename, mode)
+    print(f"File '{filename}' opened")
+    try:
+        yield file
+    finally:
+        file.close()
+        print(f"File '{filename}' closed automatically")
 
-# Using it
-with timer():
-    total = sum(range(1000000))
+
+# --- main ---
+filename = input("Enter filename: ")
+
+with open_file(filename, "w") as f:
+    f.write("Hello, World!\n")
+    f.write("Written from main block.\n")
+    print("Writing done in main")
