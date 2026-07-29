@@ -1,20 +1,12 @@
-def my_decorator(func):
-    def wrapper():
-        print("Something before the function runs")
-        func()
-        print("Something after the function runs")
-    return wrapper
+def decorator_func(main_func):
+    def wrapper_func():
+        val = main_func()
+        val += 10
+        return val
+    return wrapper_func
 
+@decorator_func
+def main_func():
+    return 5
 
-@my_decorator
-def say_hello():
-    print("Hello!")
-
-say_hello()
-
-"""
-O/p
-Something before the function runs
-Hello!
-Something after the function runs
-"""
+print(main_func()) # o/p 15
