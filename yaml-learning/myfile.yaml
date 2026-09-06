@@ -1,0 +1,10 @@
+---
+  myname: "jagdish tirumala"
+  my_company: "vmware"
+  Fruits:
+    - Apple
+    - banana
+    - Pineapple
+  my_employee_db:
+    my_name: "jagdish"
+    my_company: "vmware"
